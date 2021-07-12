@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchoolAdminApp.Properties
+namespace animated_rain_loading.Properties
 {
 
 

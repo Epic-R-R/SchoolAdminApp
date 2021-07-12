@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SchoolAdminApp
+namespace animated_rain_loading
 {
     static class Program
     {
@@ -16,7 +16,8 @@ namespace SchoolAdminApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new LoadingFrom());
+            Application.Run(new MainForm());
         }
     }
 }
