@@ -141,10 +141,10 @@ namespace animated_rain_loading
             OpenChildForm(new FormSMS());
         }
 
-        private void btnLibrary_Click(object sender, EventArgs e)
+        private void BtnAttendance_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormLibrary());
+            OpenChildForm(new FormAttendance());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

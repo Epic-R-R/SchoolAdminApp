@@ -55,11 +55,11 @@
     <Compile Include="LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormLibrary.cs">
+    <Compile Include="Forms\FormAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormLibrary.Designer.cs">
-      <DependentUpon>FormLibrary.cs</DependentUpon>
+    <Compile Include="Forms\FormAttendance.Designer.cs">
+      <DependentUpon>FormAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormTime.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormLibrary.resx">
-      <DependentUpon>FormLibrary.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormAttendance.resx">
+      <DependentUpon>FormAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTime.resx">
       <DependentUpon>FormTime.cs</DependentUpon>

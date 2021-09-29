@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
-            this.btnLibrary = new FontAwesome.Sharp.IconButton();
+            this.btnAttendance = new FontAwesome.Sharp.IconButton();
             this.btnSMS = new FontAwesome.Sharp.IconButton();
             this.btnTime = new FontAwesome.Sharp.IconButton();
             this.btnClass = new FontAwesome.Sharp.IconButton();
@@ -41,6 +41,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.labelTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.labelTime = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -64,7 +64,7 @@
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panelSideMenu.Controls.Add(this.btnSetting);
-            this.panelSideMenu.Controls.Add(this.btnLibrary);
+            this.panelSideMenu.Controls.Add(this.btnAttendance);
             this.panelSideMenu.Controls.Add(this.btnSMS);
             this.panelSideMenu.Controls.Add(this.btnTime);
             this.panelSideMenu.Controls.Add(this.btnClass);
@@ -101,28 +101,28 @@
             this.btnSetting.UseVisualStyleBackColor = true;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
-            // btnLibrary
+            // btnAttendance
             // 
-            this.btnLibrary.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLibrary.FlatAppearance.BorderSize = 0;
-            this.btnLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibrary.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLibrary.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.btnLibrary.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnLibrary.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLibrary.IconSize = 32;
-            this.btnLibrary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibrary.Location = new System.Drawing.Point(0, 318);
-            this.btnLibrary.Name = "btnLibrary";
-            this.btnLibrary.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnLibrary.Size = new System.Drawing.Size(164, 40);
-            this.btnLibrary.TabIndex = 6;
-            this.btnLibrary.Text = "Library";
-            this.btnLibrary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibrary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLibrary.UseVisualStyleBackColor = true;
-            this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
+            this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAttendance.FlatAppearance.BorderSize = 0;
+            this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttendance.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAttendance.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.btnAttendance.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAttendance.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAttendance.IconSize = 32;
+            this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttendance.Location = new System.Drawing.Point(0, 318);
+            this.btnAttendance.Name = "btnAttendance";
+            this.btnAttendance.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAttendance.Size = new System.Drawing.Size(164, 40);
+            this.btnAttendance.TabIndex = 6;
+            this.btnAttendance.Text = "Attendance";
+            this.btnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttendance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAttendance.UseVisualStyleBackColor = true;
+            this.btnAttendance.Click += new System.EventHandler(this.BtnAttendance_Click);
             // 
             // btnSMS
             // 
@@ -295,6 +295,21 @@
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnExit.IconColor = System.Drawing.Color.DimGray;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 30;
+            this.btnExit.Location = new System.Drawing.Point(852, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 32);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
+            // 
             // labelTitleChildForm
             // 
             this.labelTitleChildForm.AutoSize = true;
@@ -378,21 +393,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnExit.IconColor = System.Drawing.Color.DimGray;
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 30;
-            this.btnExit.Location = new System.Drawing.Point(852, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(35, 32);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,7 +424,7 @@
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnDashboard;
         private FontAwesome.Sharp.IconButton btnSetting;
-        private FontAwesome.Sharp.IconButton btnLibrary;
+        private FontAwesome.Sharp.IconButton btnAttendance;
         private FontAwesome.Sharp.IconButton btnSMS;
         private FontAwesome.Sharp.IconButton btnTime;
         private FontAwesome.Sharp.IconButton btnClass;

@@ -1,6 +1,6 @@
 ﻿namespace animated_rain_loading
 {
-    partial class FormLibrary
+    partial class FormAttendance
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,9 @@
             this.btnShowBooks = new FontAwesome.Sharp.IconButton();
             this.btnEditBook = new FontAwesome.Sharp.IconButton();
             this.btnRemoveBook = new FontAwesome.Sharp.IconButton();
-            this.btnAddBook = new FontAwesome.Sharp.IconButton();
+            this.btnAddNewPerson = new FontAwesome.Sharp.IconButton();
+            this.DgvPersons = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersons)).BeginInit();
             this.SuspendLayout();
             // 
             // btnShowBooks
@@ -44,14 +46,15 @@
             this.btnShowBooks.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.btnShowBooks.IconColor = System.Drawing.Color.White;
             this.btnShowBooks.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnShowBooks.Location = new System.Drawing.Point(449, 319);
+            this.btnShowBooks.Location = new System.Drawing.Point(728, 446);
             this.btnShowBooks.Name = "btnShowBooks";
-            this.btnShowBooks.Size = new System.Drawing.Size(196, 51);
+            this.btnShowBooks.Size = new System.Drawing.Size(196, 44);
             this.btnShowBooks.TabIndex = 8;
-            this.btnShowBooks.Text = "Show Books List";
+            this.btnShowBooks.Text = "Readout Data";
             this.btnShowBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShowBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnShowBooks.UseVisualStyleBackColor = false;
+            this.btnShowBooks.Click += new System.EventHandler(this.btnShowBooks_Click);
             // 
             // btnEditBook
             // 
@@ -63,14 +66,15 @@
             this.btnEditBook.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.btnEditBook.IconColor = System.Drawing.Color.White;
             this.btnEditBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditBook.Location = new System.Drawing.Point(188, 319);
+            this.btnEditBook.Location = new System.Drawing.Point(511, 446);
             this.btnEditBook.Name = "btnEditBook";
-            this.btnEditBook.Size = new System.Drawing.Size(196, 51);
+            this.btnEditBook.Size = new System.Drawing.Size(196, 44);
             this.btnEditBook.TabIndex = 7;
-            this.btnEditBook.Text = "Edit Book";
+            this.btnEditBook.Text = "Get Data";
             this.btnEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditBook.UseVisualStyleBackColor = false;
+            this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
             // 
             // btnRemoveBook
             // 
@@ -82,46 +86,60 @@
             this.btnRemoveBook.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnRemoveBook.IconColor = System.Drawing.Color.White;
             this.btnRemoveBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRemoveBook.Location = new System.Drawing.Point(449, 88);
+            this.btnRemoveBook.Location = new System.Drawing.Point(295, 446);
             this.btnRemoveBook.Name = "btnRemoveBook";
-            this.btnRemoveBook.Size = new System.Drawing.Size(196, 51);
+            this.btnRemoveBook.Size = new System.Drawing.Size(196, 44);
             this.btnRemoveBook.TabIndex = 6;
-            this.btnRemoveBook.Text = "Remove Book";
+            this.btnRemoveBook.Text = "Remove Person";
             this.btnRemoveBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemoveBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRemoveBook.UseVisualStyleBackColor = false;
+            this.btnRemoveBook.Click += new System.EventHandler(this.btnRemoveBook_Click);
             // 
-            // btnAddBook
+            // btnAddNewPerson
             // 
-            this.btnAddBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.btnAddBook.FlatAppearance.BorderSize = 0;
-            this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.btnAddBook.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAddBook.IconColor = System.Drawing.Color.White;
-            this.btnAddBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddBook.Location = new System.Drawing.Point(188, 88);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(196, 51);
-            this.btnAddBook.TabIndex = 5;
-            this.btnAddBook.Text = "Add Book";
-            this.btnAddBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddBook.UseVisualStyleBackColor = false;
+            this.btnAddNewPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.btnAddNewPerson.FlatAppearance.BorderSize = 0;
+            this.btnAddNewPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewPerson.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnAddNewPerson.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAddNewPerson.IconColor = System.Drawing.Color.White;
+            this.btnAddNewPerson.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddNewPerson.Location = new System.Drawing.Point(76, 446);
+            this.btnAddNewPerson.Name = "btnAddNewPerson";
+            this.btnAddNewPerson.Size = new System.Drawing.Size(196, 44);
+            this.btnAddNewPerson.TabIndex = 5;
+            this.btnAddNewPerson.Text = "Add Person";
+            this.btnAddNewPerson.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddNewPerson.UseVisualStyleBackColor = false;
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
-            // FormLibrary
+            // DgvPersons
+            // 
+            this.DgvPersons.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.DgvPersons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPersons.Location = new System.Drawing.Point(23, 5);
+            this.DgvPersons.Name = "DgvPersons";
+            this.DgvPersons.Size = new System.Drawing.Size(954, 430);
+            this.DgvPersons.TabIndex = 9;
+            // 
+            // FormAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(1054, 532);
+            this.ClientSize = new System.Drawing.Size(991, 498);
+            this.Controls.Add(this.DgvPersons);
             this.Controls.Add(this.btnShowBooks);
             this.Controls.Add(this.btnEditBook);
             this.Controls.Add(this.btnRemoveBook);
-            this.Controls.Add(this.btnAddBook);
-            this.Name = "FormLibrary";
+            this.Controls.Add(this.btnAddNewPerson);
+            this.Name = "FormAttendance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Library";
+            this.Text = "Attendance";
+            this.Load += new System.EventHandler(this.FormAttendance_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersons)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,6 +149,7 @@
         private FontAwesome.Sharp.IconButton btnShowBooks;
         private FontAwesome.Sharp.IconButton btnEditBook;
         private FontAwesome.Sharp.IconButton btnRemoveBook;
-        private FontAwesome.Sharp.IconButton btnAddBook;
+        private FontAwesome.Sharp.IconButton btnAddNewPerson;
+        private System.Windows.Forms.DataGridView DgvPersons;
     }
 }
